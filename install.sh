@@ -20,17 +20,19 @@ sudo chsh $(whoami) -s /bin/zsh
 
 #Setup
 cd $DOTFILES_DIR
+#.config
+cp -r ./config/* ~/.config
+
 #lightdm 
 sudo systemctl enable lightdm.service
 sudo sed -i 's/#greeter-session=example-gtk-gnome/greeter-session=lightdm-webkit2-greeter/g' /etc/lightdm/lightdm.conf
+
 #neofetch
+sudo sed -i "s/image_source=\"\/home\/user_to_replace\/kyubey.jpg\"/image_source=\"\/home\/$(whoami)\/kyubey.jpg\"/g" ~/.config/neofetch/config.conf
 if ! cat ~/.zshrc | grep "alias neofetch=\"neofetch --config ~/.config/neofetch/config.conf\""; then
 	echo "alias neofetch=\"neofetch --config ~/.config/neofetch/config.conf\"" >> ~/.zshrc
 fi
-#os-release
-./os-release-edit.sh
-#.config
-cp -r config/* ~/.config
+
 #Audio files + images
 cp ./mataashita.wav ~
 cp ./kyubey.jpg ~
