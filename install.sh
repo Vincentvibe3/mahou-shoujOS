@@ -12,7 +12,10 @@ sudo pacman -S neofetch --noconfirm
 sudo pacman -S neovim --noconfirm
 sudo pacman -S zsh --noconfirm
 sudo pacman -S jp2a --noconfirm
-
+sudo pacman -S noto-fonts --noconfirm
+sudo pacman -S noto-fonts-cjk --noconfirm
+sudo pacman -S noto-fonts-emoji --noconfirm
+sudo pacman -S noto-fonts-extra --noconfirm
 #Other
 cd ~
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
