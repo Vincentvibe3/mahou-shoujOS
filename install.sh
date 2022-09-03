@@ -20,6 +20,8 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 cd $DOTFILES_DIR
 #os-release
 ./os-release-edit.sh
+#.config
+cp -r config/* ~/.config
 #Grub
 cd ./grub
 ./editName.sh
