@@ -13,6 +13,7 @@ sudo pacman -S neovim --noconfirm
 sudo pacman -S zsh --noconfirm
 sudo pacman -S jp2a --noconfirm
 sudo pacman -S imagemagick --noconfirm
+sudo pacman -S picom --noconfirm
 sudo pacman -S noto-fonts --noconfirm
 sudo pacman -S noto-fonts-cjk --noconfirm
 sudo pacman -S noto-fonts-emoji --noconfirm

@@ -231,9 +231,9 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywiboxright = wibox({ ontop = true, y = s.workarea["height"]-beautiful.useless_gap*2-beautiful.wibar_height, x = beautiful.useless_gap*2, screen = s, width = (s.workarea["width"]-beautiful.useless_gap*4), height = beautiful.wibar_height, visible = true })
+    s.mywiboxright = awful.wibar({position="bottom", screen="s", height=beautiful.wibar_height})
     s.mywiboxright:struts({ 
-        bottom = beautiful.wibar_height+beautiful.useless_gap*2,
+        bottom = beautiful.wibar_height,
         -- left = beautiful.useless_gap,
         -- right = beautiful.useless_gap,
         -- top = beautiful.useless_gap
