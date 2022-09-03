@@ -22,6 +22,7 @@ sudo chsh $(whoami) -s /bin/zsh
 cd $DOTFILES_DIR
 #lightdm 
 sudo systemctl enable lightdm.service
+sudo sed -i 's/greeter-session=lightdm-*-greeter/greeter-session=lightdm-webkit2-greeter/g' /etc/lightdm/lightdm.conf
 #neofetch
 if ! cat ~/.zshrc | grep "alias neofetch=\"neofetch --config ~/.config/neofetch/config.conf\""; then
 	echo "alias neofetch=\"neofetch --config ~/.config/neofetch/config.conf\"" >> ~/.zshrc
