@@ -20,6 +20,9 @@ sudo chsh $(whoami) -s /bin/zsh
 
 #Setup
 cd $DOTFILES_DIR
+#lightdm 
+sudo systemctl enable lightdm.service
+#neofetch
 if ! cat ~/.zshrc | grep "alias neofetch=\"neofetch --config ~/.config/neofetch/config.conf\""; then
 	echo "alias neofetch=\"neofetch --config ~/.config/neofetch/config.conf\"" >> ~/.zshrc
 fi
