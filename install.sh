@@ -22,6 +22,8 @@ cd $DOTFILES_DIR
 ./os-release-edit.sh
 #.config
 cp -r config/* ~/.config
+#Audio files
+cp ./mataashita.wav ~
 #Grub
 cd ./grub
 ./editName.sh
