@@ -14,10 +14,12 @@ sudo pacman -S zsh --noconfirm
 sudo pacman -S jp2a --noconfirm
 sudo pacman -S imagemagick --noconfirm
 sudo pacman -S picom --noconfirm
+sudo pacman -S sox --noconfirm
 sudo pacman -S noto-fonts --noconfirm
 sudo pacman -S noto-fonts-cjk --noconfirm
 sudo pacman -S noto-fonts-emoji --noconfirm
 sudo pacman -S noto-fonts-extra --noconfirm
+
 #Other
 cd ~
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
@@ -41,6 +43,7 @@ fi
 #Audio files + images
 cp ./mataashita.wav ~
 cp ./kyubey.jpg ~
+
 #Grub
 cd ./grub
 ./editName.sh
