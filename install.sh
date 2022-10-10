@@ -48,6 +48,7 @@ cp -r ./config/* ~/.config
 sudo systemctl enable lightdm.service
 sudo mkdir -p /usr/share/backgrounds/lightdm
 sudo sed -i 's/#greeter-session=.*\n/greeter-session=web-greeter\n/g' /etc/lightdm/lightdm.conf
+sudo sed -i 's/greeter-session=.*\n/greeter-session=web-greeter\n/g' /etc/lightdm/lightdm.conf
 sudo cp ./lightdm/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
 sudo cp ./lightdm/madoka.png /usr/share/backgrounds/lightdm/madoka.png
 
