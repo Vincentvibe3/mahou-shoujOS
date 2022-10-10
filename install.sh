@@ -33,6 +33,8 @@ cp -r ./config/* ~/.config
 #lightdm 
 sudo systemctl enable lightdm.service
 sudo sed -i 's/#greeter-session=example-gtk-gnome/greeter-session=lightdm-webkit2-greeter/g' /etc/lightdm/lightdm.conf
+sudo cp ./lightdm/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
+sudo cp ./lightdm/madoka.png /usr/share/backgrounds
 
 #neofetch
 sudo sed -i "s/image_source=\"\/home\/user_to_replace\/kyubey.jpg\"/image_source=\"\/home\/$(whoami)\/kyubey.jpg\"/g" ~/.config/neofetch/config.conf
