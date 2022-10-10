@@ -20,6 +20,9 @@ sudo pacman -S noto-fonts-cjk --noconfirm
 sudo pacman -S noto-fonts-emoji --noconfirm
 sudo pacman -S noto-fonts-extra --noconfirm
 
+#Temp fix for vmware
+sudo pacman -U https://archive.archlinux.org/packages/w/webkit2gtk/webkit2gtk-2.36.7-1-x86_64.pkg.tar.zst --noconfirm
+
 #Other
 cd ~
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -35,7 +38,8 @@ cp -r ./config/* ~/.config
 sudo systemctl enable lightdm.service
 sudo sed -i 's/#greeter-session=example-gtk-gnome/greeter-session=lightdm-webkit2-greeter/g' /etc/lightdm/lightdm.conf
 sudo cp ./lightdm/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
-sudo cp ./lightdm/madoka.png /usr/share/backgrounds
+sudo cp ./lightdm/madoka.png /usr/share/backgrounds/lightdm
+sudo mkdir -p /usr/share/backgrounds/lightdm
 
 #neofetch
 sudo sed -i "s/image_source=\"\/home\/user_to_replace\/kyubey.jpg\"/image_source=\"\/home\/$(whoami)\/kyubey.jpg\"/g" ~/.config/neofetch/config.conf
