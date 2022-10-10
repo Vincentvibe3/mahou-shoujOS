@@ -1,0 +1,5 @@
+[Icon Theme]
+Name = madokacursors
+Comment = madoka
+Example = left_ptr
+Inherits = hicolor

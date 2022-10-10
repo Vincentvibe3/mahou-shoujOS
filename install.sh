@@ -42,6 +42,11 @@ if ! cat ~/.zshrc | grep "alias neofetch=\"neofetch --config ~/.config/neofetch/
 	echo "alias neofetch=\"neofetch --config ~/.config/neofetch/config.conf\"" >> ~/.zshrc
 fi
 
+#Cursors
+mkdir -p ~/.icons/madokacursors
+cp -r ./cursors/cursors ~/.icons/madokacursors
+cp ./cursors/index.theme ~/.icons/madokacursors
+
 #Audio files + images
 cp ./mataashita.wav ~
 cp ./kyubey.jpg ~
