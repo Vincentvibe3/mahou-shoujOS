@@ -22,12 +22,13 @@ sudo pacman -S noto-fonts-extra --noconfirm
 
 #Other
 cd ~
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 sudo chsh $(whoami) -s /bin/zsh 
 
 #Setup
 cd $DOTFILES_DIR
 #.config
+mkdir ~/.config
 cp -r ./config/* ~/.config
 
 #lightdm 
