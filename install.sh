@@ -6,7 +6,7 @@ sudo pacman -S rofi --noconfirm --needed
 sudo pacman -S awesome --noconfirm --needed
 sudo pacman -S alacritty --noconfirm --needed
 sudo pacman -S lightdm --noconfirm --needed
-sudo pacman -S lightdm-webkit2-greeter --noconfirm --needed
+# sudo pacman -S lightdm-webkit2-greeter --noconfirm --needed
 sudo pacman -S firefox --noconfirm --needed
 sudo pacman -S neofetch --noconfirm --needed
 sudo pacman -S neovim --noconfirm --needed
@@ -19,6 +19,16 @@ sudo pacman -S noto-fonts --noconfirm --needed
 sudo pacman -S noto-fonts-cjk --noconfirm --needed
 sudo pacman -S noto-fonts-emoji --noconfirm --needed
 sudo pacman -S noto-fonts-extra --noconfirm --needed
+
+
+cd ~
+
+# web greeter
+mkdir aur
+cd aur
+git clone https://aur.archlinux.org/web-greeter.git web-greeter
+cd web-greeter
+yes | makepkg -s -i
 
 #Temp fix for vmware
 sudo pacman -U https://archive.archlinux.org/packages/w/webkit2gtk/webkit2gtk-2.36.7-1-x86_64.pkg.tar.zst --noconfirm
@@ -37,7 +47,7 @@ cp -r ./config/* ~/.config
 #lightdm 
 sudo systemctl enable lightdm.service
 sudo mkdir -p /usr/share/backgrounds/lightdm
-sudo sed -i 's/#greeter-session=example-gtk-gnome/greeter-session=lightdm-webkit2-greeter/g' /etc/lightdm/lightdm.conf
+sudo sed -i 's/#greeter-session=example-gtk-gnome/greeter-session=web-greeter/g' /etc/lightdm/lightdm.conf
 sudo cp ./lightdm/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
 sudo cp ./lightdm/madoka.png /usr/share/backgrounds/lightdm/madoka.png
 
