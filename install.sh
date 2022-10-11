@@ -60,7 +60,12 @@ if ! cat ~/.zshrc | grep "alias neofetch=\"neofetch --config ~/.config/neofetch/
 fi
 
 #Cursors
+mkdir -p ~/.config/gtk-3.0
+cp ./cursors/default/settings.ini  ~/.config/gtk-3.0/settings.in
+mkdir -p ~/.icons/default
+cp ./cursors/default/index.theme ~/.icons/default/index.theme
 mkdir -p ~/.icons/madokacursors
+
 cp -r ./cursors/cursors ~/.icons/madokacursors
 cp ./cursors/index.theme ~/.icons/madokacursors
 
