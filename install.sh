@@ -19,6 +19,7 @@ sudo pacman -S noto-fonts --noconfirm --needed
 sudo pacman -S noto-fonts-cjk --noconfirm --needed
 sudo pacman -S noto-fonts-emoji --noconfirm --needed
 sudo pacman -S noto-fonts-extra --noconfirm --needed
+sudo pacman -S dolphin --noconfirm --needed
 
 
 cd ~
